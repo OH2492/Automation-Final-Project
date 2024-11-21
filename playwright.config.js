@@ -41,7 +41,7 @@ module.exports = defineConfig({
       mode: 'only-on-failure',
       fullPage: true,
     },
-    video: 'retain-on-failure',
+    video: 'off',
   },
 
   /* Configure projects for major browsers */
