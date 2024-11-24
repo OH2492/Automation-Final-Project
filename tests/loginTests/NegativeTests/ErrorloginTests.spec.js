@@ -43,7 +43,7 @@ const userlist = [
   },
 ];
 
-test.describe.only("Negative login Test", () => {
+test.describe("Negative login Test", () => {
   test("login with incorrect username", async ({ page }) => {
     await page.goto("https://www.saucedemo.com/");
     await page.locator('[data-test="username"]').click();
@@ -57,7 +57,7 @@ test.describe.only("Negative login Test", () => {
   });
 
   for (let user of userlist) {
-    test.only(`${user.username === "" ? "empty password" : user.username} ,${
+    test(`${user.username === "" ? "empty password" : user.username} ,${
       user.password === "" ? "empty passowrd" : user.password
     }`, async ({ page }) => {
       await page.goto("https://www.saucedemo.com/");
