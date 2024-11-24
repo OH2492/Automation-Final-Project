@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("LoginPositiveTest", () => {
-  test("valid username", async ({ page }) => {
+  test("login with valid username and valid password", async ({ page }) => {
     await page.goto("https://www.saucedemo.com/");
     await page.locator('[data-test="username"]').click();
     await page.locator('[data-test="username"]').fill("standard_user");
@@ -12,7 +12,7 @@ test.describe("LoginPositiveTest", () => {
     await expect(page.locator('[class="app_logo"]')).toHaveText("Swag Labs");
   });
 
-  test("all users names", async ({ page }) => {
+  test("login with different usernames and valid password", async ({ page }) => {
     const Accepted_usernames = [
       "problem_user",
       "performance_glitch_user",
