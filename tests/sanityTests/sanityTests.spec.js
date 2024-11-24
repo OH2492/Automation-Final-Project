@@ -1,8 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("SanityTests", () => {
-  test("sanityTest", async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto("https://www.saucedemo.com/");
+  });
+
+  test("Steps of purchase", async ({ page }) => {
     await page.locator('[data-test="username"]').click();
     await page.locator('[data-test="username"]').fill("standard_user");
     await page.locator('[data-test="password"]').click();
