@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test.describe("LoginPositiveTest", () => {
+test.describe("Login Positive Tests", () => {
   test("login with valid username and valid password", async ({ page }) => {
     await page.goto("https://www.saucedemo.com/");
     await page.locator('[data-test="username"]').click();

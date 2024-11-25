@@ -5,7 +5,7 @@ test.describe("SanityTests", () => {
     await page.goto("https://www.saucedemo.com/");
   });
 
-  test("Steps of purchase", async ({ page }) => {
+  test("Steps of purchase", async ({ page }) => { // Test case name: 'Verify that the user can purchase two items and complete the order process'
     await page.locator('[data-test="username"]').click();
     await page.locator('[data-test="username"]').fill("standard_user");
     await page.locator('[data-test="password"]').click();
